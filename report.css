@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+
+    background:
+    linear-gradient(
+        135deg,
+        #0f172a,
+        #1e3a8a
+    );
+
+    display:flex;
+    flex-direction:column;
+}
+
+.navbar{
+
+    padding:20px 8%;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    background:
+    rgba(255,255,255,.05);
+
+    backdrop-filter:blur(10px);
+}
+
+.logo-area{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    
+}
+
+
+
+.logo-area img{
+    width:150px;
+}
+
+.logo-area h2{
+    color:white;
+}
+
+.home-btn{
+
+    text-decoration:none;
+
+    color:white;
+
+    padding:10px 20px;
+
+    border-radius:10px;
+
+    background:#2563eb;
+}
+
+.container{
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    padding:40px 20px;
+}
+
+.report-card{
+
+    width:100%;
+    max-width:700px;
+
+    background:
+    rgba(255,255,255,.08);
+
+    backdrop-filter:blur(20px);
+
+    border:
+    1px solid rgba(255,255,255,.1);
+
+    border-radius:25px;
+
+    padding:40px;
+
+    color:white;
+}
+
+.report-card h1{
+    margin-bottom:10px;
+}
+
+.report-card p{
+    color:#dbeafe;
+    margin-bottom:25px;
+}
+
+form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+label{
+    font-weight:500;
+}
+
+select,
+textarea,
+input[type=file]{
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:white;
+}
+
+.preview{
+
+    width:100%;
+
+    max-height:250px;
+
+    object-fit:cover;
+
+    border-radius:15px;
+
+    display:none;
+}
+
+.location-box{
+
+    padding:15px;
+
+    background:
+    rgba(56,189,248,.15);
+
+    border-radius:12px;
+}
+
+button{
+
+    border:none;
+
+    padding:15px;
+
+    border-radius:12px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #f97316,
+        #fb923c
+    );
+
+    color:white;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+button:hover{
+
+    transform:
+    translateY(-3px);
+}

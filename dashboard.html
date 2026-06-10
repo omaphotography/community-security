@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSRS Dashboard</title>
+
+
+<link rel="stylesheet" href="dashboard.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+
+</head>
+<body>
+
+<header>
+
+    <h1>🚔 Security Dashboard</h1>
+
+    <div class="header-buttons">
+
+        <a href="index.html" class="home-btn">
+            Home
+        </a>
+
+        <button
+            onclick="logout()"
+            class="logout-btn">
+
+            Logout
+        </button>
+
+    </div>
+
+</header>
+
+<section class="stats">
+
+<div class="card">
+    <h2 id="totalReports">0</h2>
+    <p>Total Reports</p>
+</div>
+
+<div class="card pending">
+    <h2 id="pendingReports">0</h2>
+    <p>Pending</p>
+</div>
+
+<div class="card investigating">
+    <h2 id="investigatingReports">0</h2>
+    <p>Investigating</p>
+</div>
+
+<div class="card resolved">
+    <h2 id="resolvedReports">0</h2>
+    <p>Resolved</p>
+</div>
+
+</section>
+
+<section class="controls">
+
+<input
+    type="text"
+    id="searchInput"
+    placeholder="Search reports...">
+
+<select id="statusFilter">
+
+    <option value="">
+        All Statuses
+    </option>
+
+    <option value="Pending">
+        Pending
+    </option>
+
+    <option value="Investigating">
+        Investigating
+    </option>
+
+    <option value="Resolved">
+        Resolved
+    </option>
+
+</select>
+
+
+</section>
+
+<section class="table-container">
+
+<table>
+
+    <thead>
+        <tr>
+            <th>Type</th>
+            <th>Description</th>
+            <th>Location</th>
+            <th>Status</th>
+            <th>Image</th>
+        </tr>
+    </thead>
+
+    <tbody id="reportTable"></tbody>
+
+</table>
+
+
+</section>
+
+<script src="dashboard.js"></script>
+
+</body>
+</html>

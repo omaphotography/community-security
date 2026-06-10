@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Incident</title>
+
+```
+<link rel="stylesheet" href="report.css">
+```
+
+</head>
+<body>
+
+```
+<nav class="navbar">
+
+    <div class="logo-area">
+        <img src="assets/logo.png" alt="CSRS Logo" class="logo">
+        <h2>CSRS</h2>
+    </div>
+
+    <a href="index.html" class="home-btn">
+        ← Home
+    </a>
+
+</nav>
+
+<div class="container">
+
+    <div class="report-card">
+
+        <h1>🚨 Report an Incident</h1>
+
+        <p>
+            Help keep your community safe by reporting
+            suspicious activities, emergencies, theft,
+            vandalism, and other security concerns.
+        </p>
+
+        <form id="reportForm">
+
+            <label for="incidentType">
+                Incident Type
+            </label>
+
+            <select id="incidentType" required>
+                <option value="">
+                    Select Incident Type
+                </option>
+
+                <option value="Theft">Theft</option>
+                <option value="Robbery">Robbery</option>
+                <option value="Assault">Assault</option>
+                <option value="Vandalism">Vandalism</option>
+                <option value="Fire Outbreak">Fire Outbreak</option>
+                <option value="Suspicious Activity">
+                    Suspicious Activity
+                </option>
+            </select>
+
+            <label for="description">
+                Description
+            </label>
+
+            <textarea
+                id="description"
+                rows="6"
+                placeholder="Describe what happened..."
+                required></textarea>
+
+            <label for="photo">
+                Upload Evidence (Optional)
+            </label>
+
+            <input
+                type="file"
+                id="photo"
+                accept="image/*">
+
+            <img
+                id="preview"
+                class="preview"
+                style="display:none;">
+
+            <div class="location-box">
+                📍 GPS Location will be captured automatically
+            </div>
+
+            <button type="submit">
+                Submit Report
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+<!-- SUPABASE MUST COME FIRST -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<!-- YOUR APP -->
+<script src="app.js"></script>
+```
+
+</body>
+</html>

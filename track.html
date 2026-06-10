@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Track Report</title>
+    <link rel="stylesheet" href="track.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Track Your Report</h1>
+
+    <input
+        type="text"
+        id="trackingCode"
+        placeholder="Enter Tracking Code">
+
+    <button onclick="trackReport()">
+        Track Report
+    </button>
+
+    <div id="result"></div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+<script src="config.js"></script>
+<script src="track.js"></script>
+
+</body>
+</html>
